@@ -1,6 +1,6 @@
 var gamecontainer = document.querySelector('.gamecontainer')
 var gamestart = document.querySelector('.gamestart')
-
+var music =  document.getElementsByClassName('music')
 var total = 0;
 
 function restart() {
@@ -58,7 +58,7 @@ setInterval(() => {
         document.getElementById('total').innerHTML = total;
         obstacle.classList.remove('obstacleani')
         let previousScore = JSON.parse(localStorage.getItem("HighScore"))
-        console.log("oytdyuf", previousScore)
+        gamecontainer.classList.remove('music')
     }
 
 }, 100);
