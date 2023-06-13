@@ -1,6 +1,12 @@
 var gamecontainer = document.querySelector('.gamecontainer')
 var gamestart = document.querySelector('.gamestart')
+
 var total = 0;
+
+function restart() {
+    
+    location.reload();
+}
 
 document.onkeydown = function (e) {
     console.log(e.keyCode)
