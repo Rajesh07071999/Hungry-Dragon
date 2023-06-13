@@ -15,10 +15,13 @@ var total=0;
 //   });
 
 // startbtn.addEventListener()
+
+
+document.ons
 document.onkeydown = function (e) {
     console.log(e.keyCode)
 
-    if (e.keyCode == 38) {
+    if (e.keyCode == 32) {
         var dino = document.querySelector('.dino')
         var gamescore = document.getElementById('gamescore')
         
