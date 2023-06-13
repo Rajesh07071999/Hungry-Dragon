@@ -1,10 +1,10 @@
 var gamecontainer = document.querySelector('.gamecontainer')
+console.log(gamecontainer)
 var gamestart = document.querySelector('.gamestart')
-var music =  document.getElementsByClassName('music')
+
 var total = 0;
 
 function restart() {
-
     location.reload();
 }
 
@@ -26,6 +26,33 @@ document.onkeydown = function (e) {
         else {
             console.log("khelne lago");
         }
+
+        if (total>=10) {
+            obstacle.classList.add('obstacleani2')
+           
+        }
+        else if (total>=20){
+            obstacle.classList.add('obstacleani3')
+        }
+        else if (total>=30){
+            obstacle.classList.add('obstacleani4')
+        }
+        else if (total>=50){
+            obstacle.classList.add('obstacleani5')
+        }
+        else if (total>=80){
+            obstacle.classList.add('obstacleani6')
+        }
+        else if (total>=90){
+            obstacle.classList.add('obstacleani7')
+        }
+        else if (total>=100){
+            obstacle.classList.add('obstacleani8')
+        }
+        else if (total>=150){
+            obstacle.classList.add('obstacleani9')
+        }
+
         dino.classList.add('animatedino')
 
         setTimeout(() => {
@@ -37,11 +64,15 @@ document.onkeydown = function (e) {
     }
 
 }
+
 setInterval(() => {
     dino = document.querySelector('.dino')
     obstacle = document.querySelector('.obstacle')
     gameover = document.querySelector('.gameover')
     score = document.querySelector('.score')
+    music = document.querySelector('.music')
+    stopmusic = document.querySelector('.stopmusic')
+    
 
     dx = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'))
     dy = parseInt(window.getComputedStyle(dino, null).getPropertyValue('top'))
@@ -53,12 +84,21 @@ setInterval(() => {
 
     if (offsetX < 95 && offsetY < 53) {
         gameover.style.visibility = "visible"
+        stopmusic.classList.remove('music')
         score.style.visibility = "hidden"
         document.getElementById('gamescore').style.display = "none";
         document.getElementById('total').innerHTML = total;
         obstacle.classList.remove('obstacleani')
+        obstacle.classList.remove('obstacleani2')
+        obstacle.classList.remove('obstacleani3')
+        obstacle.classList.remove('obstacleani4')
+        obstacle.classList.remove('obstacleani5')
+        obstacle.classList.remove('obstacleani6')
+        obstacle.classList.remove('obstacleani7')
+        obstacle.classList.remove('obstacleani8')
         let previousScore = JSON.parse(localStorage.getItem("HighScore"))
-        gamecontainer.classList.remove('music')
+        
+        dino.classList.remove('animatedino')
     }
 
 }, 100);

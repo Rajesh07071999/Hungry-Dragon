@@ -39,7 +39,7 @@ body{
 }
 
 .obstacle{
-    background-image: url('https://freepngimg.com/thumb/dragon/104352-photos-ghidorah-free-transparent-image-hq.png');
+    background-image: url('https://bestanimations.com/media/dragons/1317736473Dragon-16-june.gif');
     background-repeat: no-repeat;
     background-size: cover;
     width:200px;
@@ -119,7 +119,32 @@ body{
 }
 
 .obstacleani {
-    animation: obstacleani 0.99s linear infinite;
+    animation: obstacleani 2s linear infinite;
+}
+
+.obstacleani2{
+    animation: obstacleani 0.95s linear infinite;
+}
+.obstacleani3{
+    animation: obstacleani 0.90s linear infinite;
+}
+.obstacleani4{
+    animation: obstacleani 0.85s linear infinite;
+}
+.obstacleani5{
+    animation: obstacleani 0.80s linear infinite;
+}
+.obstacleani6{
+    animation: obstacleani 0.75s linear infinite;
+}
+.obstacleani7{
+    animation: obstacleani 0.65s linear infinite;
+}
+.obstacleani8{
+    animation: obstacleani 0.55s linear infinite;
+}
+.obstacleani9{
+    animation: obstacleani 0.20s linear infinite;
 }
 
 @keyframes obstacleani{
