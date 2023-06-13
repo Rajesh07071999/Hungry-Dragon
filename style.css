@@ -18,11 +18,14 @@ body{
 
 .score{
     float: right;
-    font-size: xx-large;
-    color:rgb(38, 1, 38);
+    font-size: 40px;
+    color:rgb(35, 214, 254);
     margin-top: 20px;
     margin-right: 20px;
     border-style:groove;
+}
+#gamescore{
+    color:red
 }
 
 .dino{
