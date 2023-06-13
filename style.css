@@ -57,17 +57,19 @@ body{
     background-image: url('https://www.virtualproleague.com/portal/assets/images/escudos/escudo_time_18788_1552636154.png');
     visibility: hidden;
     font-size: xx-large;
-    color:rgb(0, 0, 0);
-    background-color: rgb(244, 72, 72);
+    color:rgb(238, 238, 238);
+    /* background-color: rgb(0, 0, 0); */
     width:70%;
     height:500px;
     background-size: cover;
     bottom:30;
     position: absolute;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 130px;
     text-size-adjust: 23px;
-    left:15vw
+    left:15vw;
+    border-style:groove;
+    
 }
 
 .gamestart{

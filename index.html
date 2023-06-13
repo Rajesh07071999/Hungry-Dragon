@@ -1,25 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hungry Dragon</title>
-    <link rel="shortcut icon" href="https://www.levelwinner.com/wp-content/uploads/2018/03/hungry-dragon-scr-400x400.jpg" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="https://www.levelwinner.com/wp-content/uploads/2018/03/hungry-dragon-scr-400x400.jpg"
+      type="image/x-icon"
+    />
 
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <div class="gamecontainer">
-        <div class="gameover">Final Score :<h3 id="total">0</h3><button id="restart" onclick="restart()"><img style="width: 57px;
-            background-color: aqua;
-            color: red;
-            border-radius: 69px;
-            border: black;
-            height: 57px;" src="https://static.vecteezy.com/system/resources/previews/007/780/283/original/refresh-wooden-button-in-cartoon-style-an-asset-for-a-gui-in-a-mobile-app-or-casual-video-game-vector.jpg" alt="" srcset=""></button></div>
-        <div class="dino"></div>
-        <div class="score">Your Score : <h3  id="gamescore">0</h3> </div>
-        <div class="obstacle obstacleani"> </div>
+      <embed src="./battle-of-the-dragons-8037.mp3" loop="true" autostart="true" width="2" height="0">
+      <div class="gameover">
+        <p> Previous High Score :</p>
+        <h4 id="highscore">0</h4>
+        Your New Score :
+        <h4 id="total">0</h4>
+        <button id="restart" onclick="restart()">
+          <img
+            style="
+              width: 57px;
+              background-color: aqua;
+              color: red;
+              border-radius: 69px;
+              border: black;
+              height: 57px;
+            "
+            src="https://static.vecteezy.com/system/resources/previews/007/780/283/original/refresh-wooden-button-in-cartoon-style-an-asset-for-a-gui-in-a-mobile-app-or-casual-video-game-vector.jpg"
+            alt=""
+            srcset=""
+          />
+        </button>
+      </div>
+      <div class="dino"></div>
+      <div class="score">
+        Your Score :
+        <h3 id="gamescore">0</h3>
+      </div>
+      <div class="obstacle obstacleani"></div>
     </div>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>

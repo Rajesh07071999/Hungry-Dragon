@@ -4,7 +4,7 @@ var gamestart = document.querySelector('.gamestart')
 var total = 0;
 
 function restart() {
-    
+
     location.reload();
 }
 
@@ -15,21 +15,23 @@ document.onkeydown = function (e) {
         var dino = document.querySelector('.dino')
         var gamescore = document.getElementById('gamescore')
 
-        console.log(gamescore)
         var value = gamescore.innerHTML;
-        ++value;
-        console.log(value)
+        value++;
         total = value
+        let previousScore = JSON.parse(localStorage.getItem("HighScore"))
+
+        if (total >= previousScore) {
+            localStorage.setItem("HighScore", JSON.stringify(total))
+        }
+        else {
+            console.log("khelne lago");
+        }
         dino.classList.add('animatedino')
 
         setTimeout(() => {
             dino.classList.remove('animatedino')
             document.getElementById('gamescore').innerHTML = value;
-            if (gamescore > 5) {
-                console.log('jefyusydf', gamescore)
-                document.getElementById('gamescore').style.color = "red";
-
-            }
+            document.getElementById('highscore').innerHTML = previousScore;
         }, 700);
 
     }
@@ -55,5 +57,8 @@ setInterval(() => {
         document.getElementById('gamescore').style.display = "none";
         document.getElementById('total').innerHTML = total;
         obstacle.classList.remove('obstacleani')
+        let previousScore = JSON.parse(localStorage.getItem("HighScore"))
+        console.log("oytdyuf", previousScore)
     }
+
 }, 100);
