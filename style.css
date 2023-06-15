@@ -1,158 +1,386 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /* */
-body{
-    overflow: hidden;
+body {
+  overflow: hidden;
 }
 
-.gamecontainer{
-    background-color: aqua;
-    background-image: url('https://static.vecteezy.com/system/resources/previews/007/252/858/original/cartoon-jungle-environment-background-free-vector.jpg');
-    background-repeat: no-repeat;
-    width: 100vh 100vw;
-    height:100vh;
+.gamecontainer {
+  /* background-color: aqua; */
+  /* background-image: url('https://static.vecteezy.com/system/resources/previews/007/252/858/original/cartoon-jungle-environment-background-free-vector.jpg'); */
+  background-repeat: no-repeat;
+  width: 100vh 100vw;
+  height: 100vh;
 }
 
-.score{
-    float: right;
-    font-size: 40px;
-    color:rgb(35, 214, 254);
-    margin-top: 20px;
-    margin-right: 20px;
-    border-style:groove;
+.score {
+  float: right;
+  font-size: 40px;
+  color: rgb(35, 214, 254);
+  margin-top: 20px;
+  margin-right: 20px;
+  border-style: groove;
 }
-#gamescore{
-    color:red
+.Previous {
+  float: left;
+  font-size: 40px;
+  color: rgb(35, 214, 254);
+  margin-top: 20px;
+  margin-right: 20px;
+  border-style: groove;
+  background-image: url("https://img.freepik.com/free-vector/forest-landscape-scene-sunset-time-with-many-different-trees_1308-57783.jpg");
+}
+#gamescore {
+  color: red;
 }
 
-.dino{
-    background-image: url('https://freepngimg.com/thumb/godzilla/24441-8-godzilla-transparent-background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 249px ;
-    height:204px;
-    position: absolute;
-    bottom: 0;
+.dino {
+  background-image: url("https://freepngimg.com/thumb/godzilla/24441-8-godzilla-transparent-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 249px;
+  height: 204px;
+  position: absolute;
+  bottom: 0;
 }
 
-.obstacle{
-    background-image: url('https://bestanimations.com/media/dragons/1317736473Dragon-16-june.gif');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width:200px;
-    height:200px;
-    position: absolute;
-    bottom: 0;
-    left:80%
+.obstacle {
+  background-image: url("https://bestanimations.com/media/dragons/1317736473Dragon-16-june.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 80%;
 }
 
 .animatedino {
-    animation: dino 0.6s linear;
+  animation: dino 0.6s linear;
 }
 
-.gameover{
-    background-image: url('https://www.virtualproleague.com/portal/assets/images/escudos/escudo_time_18788_1552636154.png');
-    visibility: hidden;
-    font-size: xx-large;
-    color:rgb(238, 238, 238);
-    /* background-color: rgb(0, 0, 0); */
-    width:70%;
-    height:500px;
-    background-size: cover;
-    bottom:30;
-    position: absolute;
-    text-align: center;
-    margin-top: 130px;
-    text-size-adjust: 23px;
-    left:15vw;
-    border-style:groove;
-    
+.gameover {
+  background-image: url("https://www.virtualproleague.com/portal/assets/images/escudos/escudo_time_18788_1552636154.png");
+  visibility: hidden;
+  font-size: xx-large;
+  color: rgb(238, 238, 238);
+  /* background-color: rgb(0, 0, 0); */
+  width: 70%;
+  height: 500px;
+  background-size: cover;
+  bottom: 30;
+  position: absolute;
+  text-align: center;
+  margin-top: 130px;
+  text-size-adjust: 23px;
+  left: 15vw;
+  border-style: groove;
 }
 
-.gamestart{
-    background-image: url('https://cdn.textstudio.com/output/graphic/preview/large/0/9/3/2/239_567e7c0c.webp');
-    background-repeat: no-repeat;
-    visibility : visible;
-    font-size: xx-large;
-    color:rgb(0, 0, 0);
-    background-color: rgb(244, 72, 72);
-    width:70%;
-    height:500px;
-    background-size: cover;
-    bottom:30;
-    position: absolute;
-    text-align: center;
-    margin-top: 100px;
-    text-size-adjust: 23px;
-    left:15vw
+.gamestart {
+  background-image: url("https://cdn.textstudio.com/output/graphic/preview/large/0/9/3/2/239_567e7c0c.webp");
+  background-repeat: no-repeat;
+  visibility: hidden;
+  font-size: xx-large;
+  color: rgb(0, 0, 0);
+  background-color: rgb(244, 72, 72);
+  width: 70%;
+  height: 500px;
+  background-size: cover;
+  bottom: 30;
+  position: absolute;
+  text-align: center;
+  margin-top: 100px;
+  text-size-adjust: 23px;
+  left: 15vw;
 }
 
-.start{
-    font-size: xx-large;
-    color:rgb(0, 0, 0);
-    background-color: rgb(244, 72, 72);
-    width:70%;
-    height:500px;
-    background-size: cover;
-    bottom:30;
-    position: absolute;
-    text-align: center;
-    margin-top: 100px;
-    text-size-adjust: 23px;
-    left:15vw
+.start {
+  font-size: xx-large;
+  color: rgb(0, 0, 0);
+  background-color: rgb(244, 72, 72);
+  width: 70%;
+  height: 500px;
+  background-size: cover;
+  bottom: 30;
+  position: absolute;
+  text-align: center;
+  margin-top: 100px;
+  text-size-adjust: 23px;
+  left: 15vw;
 }
 
-
-@keyframes dino{
-    0%{
-        bottom: 0;
-    }
-    50%{
-        bottom:422px;
-    }
-    100%{
-        bottom: 0;
-    }
+@keyframes dino {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 422px;
+  }
+  100% {
+    bottom: 0;
+  }
 }
 
 .obstacleani {
-    animation: obstacleani 2s linear infinite;
+  animation: obstacleani 2s linear infinite;
 }
 
-.obstacleani2{
-    animation: obstacleani 0.95s linear infinite;
+.obstacleani2 {
+  animation: obstacleani 0.95s linear infinite;
 }
-.obstacleani3{
-    animation: obstacleani 0.90s linear infinite;
+.obstacleani3 {
+  animation: obstacleani 0.9s linear infinite;
 }
-.obstacleani4{
-    animation: obstacleani 0.85s linear infinite;
+.obstacleani4 {
+  animation: obstacleani 0.85s linear infinite;
 }
-.obstacleani5{
-    animation: obstacleani 0.80s linear infinite;
+.obstacleani5 {
+  animation: obstacleani 0.8s linear infinite;
 }
-.obstacleani6{
-    animation: obstacleani 0.75s linear infinite;
+.obstacleani6 {
+  animation: obstacleani 0.75s linear infinite;
 }
-.obstacleani7{
-    animation: obstacleani 0.65s linear infinite;
+.obstacleani7 {
+  animation: obstacleani 0.65s linear infinite;
 }
-.obstacleani8{
-    animation: obstacleani 0.55s linear infinite;
+.obstacleani8 {
+  animation: obstacleani 0.55s linear infinite;
 }
-.obstacleani9{
-    animation: obstacleani 0.20s linear infinite;
-}
-
-@keyframes obstacleani{
-    0%{
-        left:100vw;
-    }
-    100%{
-        left:-10vw;
-    }
+.obstacleani9 {
+  animation: obstacleani 0.2s linear infinite;
 }
 
+@keyframes obstacleani {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: -10vw;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato:100&display=swap");
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91c9ff;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: #eea91e;
+}
+
+.btn:hover {
+  stroke-dashoffset: -480;
+}
+
+.btn {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: 100;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.main div {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.main div button {
+  top: 500px;
+  height: 30px;
+  margin: 0 auto;
+}
+
+.container {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  opacity: 0.9;
+  background: #222;
+  z-index: 40000;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  animation-name: fadeIn_Container;
+  animation-duration: 1s;
+}
+
+.modal {
+  display: none;
+  top: 0;
+  min-width: 250px;
+  width: 80%;
+  height: 400px;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 40001;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #000;
+  margin-top: 30px;
+  margin-left: 10%;
+
+  animation-name: fadeIn_Modal;
+  animation-duration: 0.8s;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  border-radius: 10px 10px 0px 0px;
+  border-bottom: 2px solid #ccc;
+}
+
+.header a {
+  text-decoration: none;
+  float: right;
+  line-height: 70px;
+  margin-right: 20px;
+  color: #aaa;
+}
+
+.content {
+  width: 100%;
+  height: 250px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+form label {
+  display: block;
+  margin-left: 12%;
+  margin-top: 10px;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+form input {
+  display: block;
+  width: 75%;
+  margin-left: 12%;
+  margin-top: 10px;
+  border-radius: 3px;
+  font-family: sans-serif;
+}
+
+#first_label {
+  padding-top: 30px;
+}
+
+#second_label {
+  padding-top: 25px;
+}
+
+.footer {
+  width: 100%;
+  height: 80px;
+  border-radius: 0px 0px 10px 10px;
+  border-top: 2px solid #ccc;
+}
+
+.fotter button {
+  float: right;
+  margin-right: 10px;
+  margin-top: 18px;
+  text-decoration: none;
+}
+
+/****MEDIA QUERIES****/
+
+@media screen and (min-width: 600px) {
+  .modal {
+    width: 600px;
+    height: 300px;
+    margin-left: calc(50vw - 250px);
+    margin-top: calc(50vh - 150px);
+  }
+
+  .header {
+    width: 100%;
+    height: 40px;
+  }
+
+  .header a {
+    line-height: 40px;
+    margin-right: 10px;
+  }
+
+  .content {
+    width: 100%;
+    height: 190px;
+  }
+
+  form label {
+    margin-left: 10%;
+    margin-top: 10px;
+  }
+
+  form input {
+    width: 75%;
+    margin-left: 10%;
+    margin-top: 10px;
+  }
+
+  #first_label {
+    padding-top: 0px;
+  }
+
+  #second_label {
+    padding-top: 0px;
+  }
+
+  .footer {
+    width: 100%;
+    height: 70px;
+  }
+
+  .footer button {
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+}
+
+/*LARGE SCREEN*/
+@media screen and (min-width: 1300px) {
+}
+
+/****ANIMATIONS****/
+
+@keyframes fadeIn_Modal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn_Container {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.9;
+  }
+}

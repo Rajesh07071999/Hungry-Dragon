@@ -1,53 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hungry Dragon</title>
-    <link
-      rel="shortcut icon"
-      href="https://www.levelwinner.com/wp-content/uploads/2018/03/hungry-dragon-scr-400x400.jpg"
-      type="image/x-icon"
-    />
 
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div class="gamecontainer">
-      
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hungry Dragon</title>
+  <link rel="shortcut icon" href="https://cdn.mobygames.com/e8b076e0-ac00-11ed-8d66-02420a000132.webp"
+    type="image/x-icon" style="border-radius: 30%" />
 
-      <div class="stopmusic">
-        <embed src="./FASTER-TEMPO-2020-07-05_-_Dragon_Boss_Fight_-_David_Fesliyan.mp3" class="music" loop="false" autostart="true" width="2" height="0">
-      </div>
-     
-      <div class="gameover">
-        <p style="background-color: rgb(255, 242, 242);color:black"> Previous High Score :</p>
-        <h4 style="background-color: rgb(255, 242, 242);color:black" id="highscore">0</h4>
-        <p style="background-color: rgb(255, 242, 242);color:black"> Your Score  :</p>
-        <h4 style="background-color: rgb(255, 242, 242);color:black" id="total">0</h4>
-        <p style="background-color: rgb(255, 242, 242);;color:black;border:lightcoral" id="restart" onclick="restart()">
-          <img
-            style="
-              width: 57px;
-              background-color: aqua;
-              color: red;
-              border-radius: 69px;
-              border: black;
-              height: 57px;
-            "
-            src="https://e7.pngegg.com/pngimages/692/757/png-clipart-mobile-app-google-play-application-software-computer-icons-wood-button-wood-logo-wood-thumbnail.png"
-            alt=""
-            srcset=""
-          />
-        </p>
-      </div>
-      <div class="dino"></div>
-      <div class="score">
-        Your Score :
-        <h3 id="gamescore">0</h3>
-      </div>
-      <div class="obstacle obstacleani"></div>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="gamecontainer">
+    <div class="stopmusic">
+      <embed src="./FASTER-TEMPO-2020-07-05_-_Dragon_Boss_Fight_-_David_Fesliyan.mp3" class="music" loop="false"
+        autostart="true" width="2" height="0" />
     </div>
-    <script src="./script.js"></script>
-  </body>
+
+    <div class="gameover">
+      <p style="background-color: rgb(255, 242, 242); color: black">
+        Previous High Score :
+      </p>
+      <h4 style="background-color: rgb(255, 242, 242); color: black" id="highscore">
+        0
+      </h4>
+      <p style="background-color: rgb(255, 242, 242); color: black">
+        Your Score :
+      </p>
+      <h4 style="background-color: rgb(255, 242, 242); color: black" id="total">
+        0
+      </h4>
+      <p style="
+            background-color: rgb(255, 242, 242);
+            color: black;
+            border: lightcoral;
+          ">
+        <button style="margin-bottom: 34px; margin-right: 450px" class="btn" id="restart" onclick="restart()">
+          Play
+        </button>
+        <button class="btn" id="open" onclick="openModal">Help</button>
+      </p>
+    </div>
+    <div class="dino"></div>
+
+    <div class="score">
+      Your Score :
+      <h3 id="gamescore">0</h3>
+    </div>
+    <div class="obstacle obstacleani"></div>
+  </div>
+
+
+  <div class="modal" id="b">
+    <div class="header" style="background: linear-gradient(white, rgb(21, 218, 37))">
+      <p style="margin-top: 24px; text-align: -webkit-center">
+        <a href="#" class="cancel">X</a>GAME INSTRUCTION
+      </p>
+    </div>
+    <div class="content" style="background-color: aquamarine">
+      <img src="./Screenshot 2023-06-15 161200.png" style="width: 20%; height: 40px" alt="" srcset="" /><br />
+      <h4>1.Click on <button>Play</button> button to start the game</h4>
+      <br />
+      <h4>
+        2.Press <button style="width: 100px">space</button> , ⎵ , Key to make
+        godzilla up
+      </h4>
+      <br />
+      <h4>
+        By doing fast score gradually it will change the speed of our dinosaur
+      </h4>
+      <br />
+      <center>
+        <h2>* Good Luck *</h2>
+      </center>
+    </div>
+    <div class="footer" style="background-color: rgb(94, 153, 212); color: rgb(0, 0, 0)">
+      <button class="cancel" style="width: 100px; height: 40px">Close</button>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
 </html>
