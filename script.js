@@ -1,5 +1,4 @@
 var gamecontainer = document.querySelector(".gamecontainer");
-
 console.log(gamecontainer);
 // var gamestart = document.querySelector('.gamestart')
 
@@ -55,11 +54,6 @@ document.onkeydown = function (e) {
         }, 700);
     }
 };
-
-function addnnn(){
-    var upbtn = document.getElementById("upbtn")
-    dino.classList.add("animatedino");
-}
 
 setInterval(() => {
     dino = document.querySelector(".dino");
